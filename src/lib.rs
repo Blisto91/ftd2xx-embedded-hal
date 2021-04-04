@@ -101,13 +101,12 @@ mod spi;
 
 pub use delay::Delay;
 pub use gpio::OutputPin;
-pub use i2c::I2c;
-use libftd2xx::Ft232h;
-use libftd2xx::Ft4232h;
-use libftd2xx::FtdiCommon;
+pub use i2c::{I2c, I2cError};
 pub use spi::Spi;
 
-use libftd2xx::{DeviceTypeError, Ftdi, FtdiMpsse, MpsseSettings, TimeoutError};
+use libftd2xx::{
+    DeviceTypeError, Ft232h, Ft4232h, Ftdi, FtdiCommon, FtdiMpsse, MpsseSettings, TimeoutError,
+};
 use std::convert::TryFrom;
 use std::{cell::RefCell, convert::TryInto, sync::Mutex, time::Duration};
 

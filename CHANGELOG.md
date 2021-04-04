@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Changed the default linking method on Linux to dynamic.
   Static linking can be enabled with the `static` feature flag.
+- Added checks for missing ACKs from the I2C slave.
+  Missing ACKs will now return an `NakError` from the I2C traits.
 
 ## [0.5.1] - 2021-03-20
 ### Fixed
